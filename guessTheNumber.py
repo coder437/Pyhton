@@ -4,11 +4,11 @@ MIN = 1
 MAX = 10
 
 targetNumber = random.randint(MIN, MAX)
-print(targetNumber)
+#print(targetNumber)
 
 guessedNumber = input("your guess")
 
-if targetNumber = guessedNumber :
+if targetNumber == guessedNumber :
     print("Yay! you guessed correct")
 else :
     print("Oops! wrong guess")
