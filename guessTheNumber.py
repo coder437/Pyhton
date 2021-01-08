@@ -1,14 +1,34 @@
 import random
-print("Guess a number between 1 to 10")
-MIN = 1
-MAX = 10
 
-targetNumber = random.randint(MIN, MAX)
-#print(targetNumber)
+print("Number guessing game")
 
-guessedNumber = input("your guess")
 
-if targetNumber == guessedNumber :
-    print("Yay! you guessed correct")
-else :
-    print("Oops! wrong guess")
+number = random.randint(1, 10)
+
+chances = 0
+
+print("Guess a number (between 1 and 10):")
+
+while chances < 5:
+
+
+    guess = int(input("Enter your guess:- "))
+
+
+    if guess == number:
+ 
+        print("Congratulation YOU WON!!!")
+        break
+
+    elif guess < number:
+        print("Your guess was too low: Guess a number higher than", guess)
+
+    
+    else:
+        print("Your guess was too high: Guess a number lower than", guess)
+
+
+    chances += 1
+
+if not chances < 5:
+    print("YOU LOSE!!! The number is", number)
