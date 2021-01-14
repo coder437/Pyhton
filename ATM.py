@@ -1,34 +1,48 @@
-class Atm:
-    def __init__(self,cardnumber,pin):
-        self.cardnumber = cardnumber
-        self.pin = pin
+class ATM:
+    def __init__(self):
+        def check_balance(self):
+            print(balance)
 
-    def check_balance(self):
-        print("Your balance is 50000")
+        def withdraw_balance():
+            withdrawl_amount = int(input("please enter the cash you want to withdraw"))
+            if withdrawl_amount <= balance:
+                print("cash left is",balance)
+            else:
+                print("please enter a valid amount or add some cash to account")
+        
+        def add_balance():
+            added_amount = int(input("lease enter the cash you want to add"))
+            if added_amount==0:
+                print("please add a amount")
+            else:
+                print("your added"+added_amount)
 
-    def withdrawl(self,amount):
-        new_amount = 50000 - amount
-        print("you have withdrawn amount "+str(amount) +". Your remaining balance is "+ str(new_amount))
-
+        def exit():
+            print("thanks for submision")
 
 def main():
-    Card_number = input("insert your card number:- ")
-    pin_number  = input("enter your pin number:- ")
-
-    new_user =  Atm(Card_number ,pin_number)
-
-    print("Choose your activity ")
-    print("1.Balance Enquriy   2.withdrawl")
-    activity = int(input("enter activity number :- "))
-
-    if (activity == 1):
-        new_user.check_balance()
-    elif (activity == 2):
-        amount = int(input("enter the amount:- "))
-        new_user.withdrawl(amount)
+    balance = 0
+    cardNumber = 12345
+    card_number = input("please enter card number")
+    pin_number = input("please enter pin")
+    if card_number == 12345:
+        print("please select an activity")
+        print("1. check balance")
+        print("2. withdraw amount")
+        print("3. add amount")
+        print("4. exit")
+        activity = int(input("please enter activity number"))
+        if activity == 1:
+            check_balance()
+        elif activity == 2:
+            withdraw_balance()
+        elif activity == 3:
+            add_balance()
+        elif activity == 4:
+            exit()
+        else:
+            print("please enter a valid number")
     else:
-        print("enter a valid number")
+        print("card number incorrect")
 
-
-if __name__ == "__main__":
-    main()
+main()     
